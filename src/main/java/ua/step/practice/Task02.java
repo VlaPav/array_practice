@@ -2,6 +2,7 @@ package ua.step.practice;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -16,11 +17,16 @@ public class Task02 {
 
         // Использовать для генерирования элементов массива
         Random rnd = new Random(seed);
-
+        int arr[] = new int[30];
         // TODO: Пишите код здесь
-        for (int i = 0; i < 30; i++) {
-            System.out.print(rnd.nextInt(51+70) - 70); // 0..120 - 70 = -70..+50
-            System.out.print(" ");
+        for (int i = 0; i < arr.length; i++) {
+            //System.out.print(arr[i] = rnd.nextInt(51+70) - 70); // 0..120 - 70 = -70..+50
+            //System.out.print(" ");
+            arr[i] = rnd.nextInt(51+70) - 70;
+
+
         }
+        Arrays.sort(arr);
+        System.out.print(arr[0] + " " + arr[29]);
     }
 }
